@@ -1,0 +1,67 @@
+/* .movie-info{
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+
+.movie-info::-webkit-scrollbar{
+    display: none;
+} */
+
+.movie{
+    
+    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+    width: 350px;
+    margin: 1rem;
+    background-color: red;
+    border-radius: 5px;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.movie .poster-path{
+    width: 100%;
+    height: 250px;
+}
+
+.movie-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie-details .box{
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around ;
+
+}
+
+.movie-details .title{
+    width:160px;
+    text-align: center;
+}
+
+.movie-details .overview{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    max-height: 100%;
+    background-color: red;
+    opacity: 0.9;
+    box-sizing: border-box;
+    padding: 1rem;
+    overflow-y: auto;
+    transform: translateY(101%);
+    cursor: pointer;
+}
+
+.movie-details:hover .overview{
+    transform: translateY(0%);
+    transition: 0.5s;
+}
