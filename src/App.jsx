@@ -15,7 +15,6 @@ function App() {
     await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${text}`)
     .then(res => res.json())
     .then(data => {
-      console.log(data.results)
       setMovies(data.results);
     })
   }
@@ -55,11 +54,20 @@ function App() {
             ))}
 
             </div>
-        
+              <NewComponent />
           </main>
     </header>
   )
 }
+
+const NewComponent = () => {
+  return(
+    <div>
+      <h1>Hello people</h1>
+    </div>
+  )
+}
+
 
 export default App
 
